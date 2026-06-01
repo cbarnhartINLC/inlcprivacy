@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Microsoft 365 Privacy Statement — Inland Northwest Land Conservancy</title>
+<meta name="description" content="How Inland Northwest Land Conservancy collects, uses, and protects personal data within its Microsoft 365 environment.">
+<style>
+  /* ---- Self-contained: no web fonts, no external requests ---- */
+  :root{
+    --paper:#f6f3ea;
+    --paper-2:#efeadc;
+    --ink:#23291f;
+    --ink-soft:#4b5142;
+    --forest:#1f4d2e;
+    --forest-2:#2e6b3e;
+    --moss:#6f8f5a;
+    --ochre:#b07f2b;
+    --line:#d8d2c0;
+    --shadow:0 1px 2px rgba(31,77,46,.06),0 8px 28px rgba(31,77,46,.07);
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+    --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    --maxw:46rem;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:var(--forest-2);text-underline-offset:2px}
+  a:hover{color:var(--forest)}
+  .skip{position:absolute;left:-9999px}
+  .skip:focus{left:1rem;top:1rem;background:#fff;padding:.5rem .8rem;border-radius:6px;z-index:10}
+
+  /* ---- Masthead ---- */
+  .masthead{
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(160deg,#173d24 0%,#1f4d2e 55%,#27613a 100%);
+    color:#f3efe3;
+    border-bottom:4px solid var(--ochre);
+  }
+  .contours{position:absolute;inset:0;width:100%;height:100%;opacity:.16;pointer-events:none}
+  .masthead .wrap{position:relative;max-width:var(--maxw);margin:0 auto;padding:3.4rem 1.5rem 2.6rem}
+  .kicker{
+    font-family:var(--sans);
+    text-transform:uppercase;
+    letter-spacing:.22em;
+    font-size:.72rem;
+    font-weight:600;
+    color:#cfe0c0;
+    margin:0 0 1rem;
+  }
+  .masthead h1{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(2rem,5.2vw,2.9rem);
+    line-height:1.1;
+    margin:0;
+    letter-spacing:.005em;
+  }
+  .masthead .org{
+    font-family:var(--serif);
+    font-style:italic;
+    font-size:1.15rem;
+    color:#e7dfba;
+    margin:.55rem 0 0;
+  }
+  .meta{
+    margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;
+    font-size:.84rem;color:#d6e2cb;
+  }
+  .meta b{color:#fff;font-weight:600}
+
+  /* ---- Layout ---- */
+  main{max-width:var(--maxw);margin:0 auto;padding:2.4rem 1.5rem 1rem}
+  .lede{font-size:1.06rem;color:var(--ink-soft)}
+
+  /* ---- Table of contents ---- */
+  nav.toc{
+    background:var(--paper-2);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:1.1rem 1.3rem;
+    margin:1.8rem 0 2.6rem;
+    box-shadow:var(--shadow);
+  }
+  nav.toc h2{
+    font-family:var(--sans);
+    text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;
+    color:var(--ink-soft);margin:0 0 .7rem;font-weight:700;
+  }
+  nav.toc ol{margin:0;padding:0;list-style:none;columns:2;column-gap:1.6rem}
+  nav.toc li{margin:.18rem 0;break-inside:avoid;font-size:.92rem}
+  nav.toc a{text-decoration:none;color:var(--ink)}
+  nav.toc a:hover{color:var(--forest-2);text-decoration:underline}
+
+  /* ---- Sections ---- */
+  section{margin:0 0 2.2rem;scroll-margin-top:1.2rem}
+  h2.sec{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:1.5rem;
+    color:var(--forest);
+    margin:0 0 .2rem;
+    padding-top:1rem;
+    border-top:1px solid var(--line);
+    display:flex;gap:.6rem;align-items:baseline;
+  }
+  h2.sec .num{
+    font-family:var(--sans);
+    font-size:.85rem;font-weight:700;color:var(--ochre);
+    letter-spacing:.04em;flex:none;padding-top:.18rem;
+  }
+  h3{
+    font-family:var(--sans);
+    font-size:.82rem;text-transform:uppercase;letter-spacing:.1em;
+    color:var(--moss);font-weight:700;margin:1.4rem 0 .4rem;
+  }
+  p{margin:.7rem 0}
+  ul{margin:.6rem 0;padding-left:1.2rem}
+  li{margin:.32rem 0}
+  ul li::marker{color:var(--moss)}
+
+  /* ---- Data table ---- */
+  .table-scroll{overflow-x:auto;margin:1rem 0;border-radius:10px;box-shadow:var(--shadow)}
+  table{border-collapse:collapse;width:100%;min-width:30rem;background:#fff;font-size:.95rem}
+  caption{caption-side:top;text-align:left;font-size:.82rem;color:var(--ink-soft);margin-bottom:.5rem}
+  thead th{
+    background:var(--forest);color:#f3efe3;text-align:left;
+    font-family:var(--sans);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;
+    padding:.7rem .9rem;font-weight:600;
+  }
+  tbody th{text-align:left;font-weight:600;color:var(--ink);width:34%;vertical-align:top}
+  td,tbody th{padding:.7rem .9rem;border-top:1px solid var(--line);vertical-align:top}
+  tbody tr:nth-child(even){background:var(--paper-2)}
+
+  /* ---- Contact ---- */
+  .contact{
+    background:var(--paper-2);
+    border:1px solid var(--line);
+    border-left:4px solid var(--forest-2);
+    border-radius:10px;padding:1.1rem 1.3rem;margin:.8rem 0 0;
+  }
+  .contact .role{font-weight:700;color:var(--forest)}
+  .contact div{margin:.15rem 0}
+
+  /* ---- Footer ---- */
+  footer{
+    max-width:var(--maxw);margin:2rem auto 0;padding:1.6rem 1.5rem 3rem;
+    border-top:1px solid var(--line);color:var(--ink-soft);font-size:.84rem;
+  }
+  footer .mark{font-family:var(--serif);font-style:italic;color:var(--forest)}
+
+  /* ---- Responsive ---- */
+  @media (max-width:560px){
+    body{font-size:16px}
+    nav.toc ol{columns:1}
+    tbody th{width:auto}
+  }
+
+  /* ---- Print ---- */
+  @media print{
+    body{background:#fff;color:#000;font-size:11pt}
+    .masthead{background:none;color:#000;border-bottom:2px solid #000}
+    .masthead h1,.masthead .org,h2.sec{color:#000}
+    .contours,nav.toc{display:none}
+    thead th{background:#eee !important;color:#000;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    a{color:#000;text-decoration:none}
+    section{page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+
+<header class="masthead">
+  <!-- Decorative topographic contour motif (inline, self-contained) -->
+  <svg class="contours" viewBox="0 0 800 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+    <g fill="none" stroke="#ffffff" stroke-width="1.4">
+      <path d="M-40,300 C140,250 260,330 420,280 C560,238 660,300 860,250"/>
+      <path d="M-40,255 C150,205 270,285 430,235 C575,193 670,255 860,205"/>
+      <path d="M-40,210 C160,160 280,240 440,190 C585,148 680,210 860,160"/>
+      <path d="M-40,165 C170,118 290,196 450,146 C595,106 690,166 860,118"/>
+      <path d="M-40,120 C180,76 300,152 460,104 C605,66 700,124 860,78"/>
+      <path d="M-40,76 C190,36 310,108 470,62 C615,26 710,82 860,40"/>
+      <ellipse cx="250" cy="330" rx="120" ry="42"/>
+      <ellipse cx="250" cy="330" rx="80" ry="26"/>
+      <ellipse cx="250" cy="330" rx="42" ry="13"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <p class="kicker">Inland Northwest Land Conservancy</p>
+    <h1>Microsoft&nbsp;365 Privacy Statement</h1>
+    <p class="org">Conserving land and water across eastern Washington &amp; north Idaho</p>
+    <div class="meta">
+      <span><b>Effective date:</b> June 1st, 2026</span>
+      <span><b>Version:</b> 1.0</span>
+      <span><b>Last reviewed:</b> June 2026</span>
+    </div>
+  </div>
+</header>
+
+<main id="content">
+  <p class="lede">This statement explains what personal information is collected and processed within Inland Northwest Land Conservancy&rsquo;s Microsoft&nbsp;365 environment, how that information is used and protected, and the rights and responsibilities of the people who use it. It is intended to be clear and practical, not a legal contract.</p>
+
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#s1">1. Purpose and Scope</a></li>
+      <li><a href="#s2">2. Information We Collect and Process</a></li>
+      <li><a href="#s3">3. How We Use This Information</a></li>
+      <li><a href="#s4">4. Microsoft as Our Service Provider</a></li>
+      <li><a href="#s5">5. Administrative Access and Monitoring</a></li>
+      <li><a href="#s6">6. How We Protect Information</a></li>
+      <li><a href="#s7">7. Data Retention and Account Lifecycle</a></li>
+      <li><a href="#s8">8. Sharing of Information</a></li>
+      <li><a href="#s9">9. Your Rights and Responsibilities</a></li>
+      <li><a href="#s10">10. Legal and Regulatory Context</a></li>
+      <li><a href="#s11">11. Changes to This Statement</a></li>
+      <li><a href="#s12">12. Contact</a></li>
+    </ol>
+  </nav>
+
+  <section id="s1">
+    <h2 class="sec"><span class="num">01</span> Purpose and Scope</h2>
+    <p>Inland Northwest Land Conservancy (&ldquo;INLC,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) is an accredited land trust based in Spokane, Washington that works to conserve land and water across eastern Washington and north Idaho. To carry out our mission, we use Microsoft&nbsp;365 as our primary platform for email, file storage, collaboration, and communication.</p>
+    <p>This Privacy Statement governs personal information processed inside our Microsoft&nbsp;365 tenant.</p>
+    <h3>Who this applies to</h3>
+    <ul>
+      <li>Employees and staff of INLC;</li>
+      <li>Board members, committee members, and officers;</li>
+      <li>Volunteers, interns, and contractors who are issued INLC accounts; and</li>
+      <li>Any other individual granted access to INLC&rsquo;s Microsoft&nbsp;365 environment.</li>
+    </ul>
+    <p>This statement does not, by itself, describe how INLC handles donor, member, or public information collected through our website, donation platforms, or other systems; those uses may be covered by a separate organizational privacy policy.</p>
+  </section>
+
+  <section id="s2">
+    <h2 class="sec"><span class="num">02</span> Information We Collect and Process</h2>
+    <p>As you use INLC&rsquo;s Microsoft&nbsp;365 environment, the following categories of information are created, stored, or processed within the platform. Much of this information is generated automatically as part of normal use.</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th scope="col">Category</th><th scope="col">Examples</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Account &amp; identity data</th><td>Name, INLC email address, username, job title, group and team membership, profile photo, and authentication credentials managed through Microsoft Entra ID.</td></tr>
+          <tr><th scope="row">Communications content</th><td>Email messages and attachments (Exchange Online), chat messages, voice and video call content, and meeting recordings or transcripts (Microsoft Teams).</td></tr>
+          <tr><th scope="row">Files &amp; documents</th><td>Documents, spreadsheets, and other files you create, store, or share in SharePoint Online, OneDrive for Business, and Teams.</td></tr>
+          <tr><th scope="row">Calendar &amp; contacts</th><td>Appointments, meeting invitations, availability, and contact records.</td></tr>
+          <tr><th scope="row">Usage &amp; diagnostic data</th><td>Sign-in records, device identifiers, IP addresses, application and service usage logs, and audit events generated as you use the environment.</td></tr>
+          <tr><th scope="row">Security &amp; compliance data</th><td>Multi-factor authentication status, conditional-access evaluations, and records retained for security monitoring and legal or audit obligations.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="s3">
+    <h2 class="sec"><span class="num">03</span> How We Use This Information</h2>
+    <p>INLC processes information in Microsoft&nbsp;365 only for legitimate organizational purposes, including:</p>
+    <ul>
+      <li>providing and operating email, file storage, calendaring, and collaboration services;</li>
+      <li>supporting day-to-day operations, programs, grants, finance, and administration;</li>
+      <li>protecting the security and integrity of our systems and data;</li>
+      <li>administering accounts, access, and licenses;</li>
+      <li>meeting legal, regulatory, accreditation, audit, and recordkeeping obligations; and</li>
+      <li>investigating suspected policy violations, security incidents, or misuse.</li>
+    </ul>
+    <p>INLC does not sell personal information, and does not use the contents of staff communications or files for advertising or unrelated commercial purposes.</p>
+  </section>
+
+  <section id="s4">
+    <h2 class="sec"><span class="num">04</span> Microsoft as Our Service Provider</h2>
+    <p>Microsoft&nbsp;365 is operated by Microsoft Corporation, which acts as INLC&rsquo;s service provider and data processor. Microsoft stores and processes data in its cloud datacenters and processes it on INLC&rsquo;s behalf according to its contractual commitments.</p>
+    <ul>
+      <li>Microsoft processes INLC data under the terms of the Microsoft Product Terms and the Microsoft Data Protection Addendum.</li>
+      <li>Microsoft states that it does not use customer content in services such as Exchange, SharePoint, OneDrive, and Teams to target advertising.</li>
+      <li>Microsoft may engage its own subprocessors to deliver the service and maintains a published list of them.</li>
+    </ul>
+    <p>More detail about how Microsoft handles data is available in the Microsoft Privacy Statement and the Microsoft Trust Center. INLC remains responsible for how the environment is configured and how data within it is used.</p>
+  </section>
+
+  <section id="s5">
+    <h2 class="sec"><span class="num">05</span> Administrative Access and Monitoring</h2>
+    <p>INLC&rsquo;s Microsoft&nbsp;365 Global Administrator and other authorized administrators have technical ability to access accounts, mailboxes, files, and logs within the environment. This access is reserved for legitimate organizational purposes and is not used for routine or arbitrary review of personal activity.</p>
+    <h3>Administrators may access content or logs to</h3>
+    <ul>
+      <li>maintain, support, and troubleshoot the environment;</li>
+      <li>recover INLC business records when an account holder is unavailable or has left the organization;</li>
+      <li>respond to security incidents or suspected misuse;</li>
+      <li>comply with legal process, audits, or regulatory requirements; and</li>
+      <li>preserve and produce records when required by law or INLC policy.</li>
+    </ul>
+    <p>The environment generates audit and sign-in logs that record activity such as logins, file access, and administrative actions. Accounts and data within Microsoft&nbsp;365 are INLC property and intended for INLC business; users should not expect personal privacy in content created or stored in the environment, although INLC handles any access responsibly and proportionately.</p>
+  </section>
+
+  <section id="s6">
+    <h2 class="sec"><span class="num">06</span> How We Protect Information</h2>
+    <p>INLC applies administrative and technical safeguards to protect information in Microsoft&nbsp;365, which may include:</p>
+    <ul>
+      <li>multi-factor authentication for accounts;</li>
+      <li>conditional-access and sign-in policies;</li>
+      <li>encryption of data in transit and at rest as provided by Microsoft;</li>
+      <li>role-based and least-privilege access for administrators;</li>
+      <li>audit logging and security monitoring; and</li>
+      <li>anti-malware, anti-phishing, and mail-filtering protections.</li>
+    </ul>
+    <p>No system can be guaranteed perfectly secure. INLC works to reduce risk and to respond promptly if an incident occurs.</p>
+  </section>
+
+  <section id="s7">
+    <h2 class="sec"><span class="num">07</span> Data Retention and Account Lifecycle</h2>
+    <p>Information in Microsoft&nbsp;365 is retained for as long as needed for organizational, legal, accreditation, and audit purposes, in accordance with INLC&rsquo;s records-retention practices. When a user leaves INLC:</p>
+    <ul>
+      <li>the account is disabled and access is removed;</li>
+      <li>relevant business records (such as email and files) may be retained, reassigned, or archived under INLC&rsquo;s recordkeeping practices; and</li>
+      <li>the account and remaining data are removed according to INLC&rsquo;s retention schedule.</li>
+    </ul>
+    <p>Specific retention periods are governed by INLC&rsquo;s records-retention policy and applicable legal requirements.</p>
+  </section>
+
+  <section id="s8">
+    <h2 class="sec"><span class="num">08</span> Sharing of Information</h2>
+    <p>INLC limits sharing of information from the Microsoft&nbsp;365 environment. Information may be shared:</p>
+    <ul>
+      <li>with Microsoft and its subprocessors as needed to provide the service;</li>
+      <li>with authorized service providers and advisors (such as IT support, auditors, or legal counsel) bound by appropriate confidentiality obligations;</li>
+      <li>when required by law, subpoena, or other legal process; and</li>
+      <li>to protect the rights, safety, property, or operations of INLC, its staff, or others.</li>
+    </ul>
+  </section>
+
+  <section id="s9">
+    <h2 class="sec"><span class="num">09</span> Your Rights and Responsibilities</h2>
+    <h3>As a user, you can expect that</h3>
+    <ul>
+      <li>INLC will handle your information responsibly and limit access to legitimate purposes;</li>
+      <li>you may ask the Operations Manager what account information INLC holds about you; and</li>
+      <li>INLC will make reasonable efforts to keep your account information accurate.</li>
+    </ul>
+    <h3>As a user, you are responsible for</h3>
+    <ul>
+      <li>using your INLC account and the environment for authorized purposes;</li>
+      <li>protecting your credentials and not sharing them;</li>
+      <li>handling personal, donor, and confidential information appropriately; and</li>
+      <li>reporting suspected security incidents or data loss promptly.</li>
+    </ul>
+    <p>Depending on applicable law, individuals may have additional rights regarding their personal information. INLC will respond to such requests in accordance with applicable law.</p>
+  </section>
+
+  <section id="s10">
+    <h2 class="sec"><span class="num">10</span> Legal and Regulatory Context</h2>
+    <p>INLC operates in Washington State and serves communities in Washington and Idaho. This statement is intended to support INLC&rsquo;s compliance with applicable privacy and recordkeeping obligations and with land-trust accreditation standards. Because privacy law is complex and evolving, this statement is not legal advice. Where this statement conflicts with applicable law or a binding INLC policy, that law or policy controls.</p>
+  </section>
+
+  <section id="s11">
+    <h2 class="sec"><span class="num">11</span> Changes to This Statement</h2>
+    <p>INLC may update this Privacy Statement from time to time to reflect changes in our systems, practices, or legal obligations. The current version and its effective date are shown at the top of this page. Material changes will be communicated to affected users through normal organizational channels.</p>
+  </section>
+
+  <section id="s12">
+    <h2 class="sec"><span class="num">12</span> Contact</h2>
+    <p>Questions about this statement or about how your information is handled in INLC&rsquo;s Microsoft&nbsp;365 environment can be directed to:</p>
+    <div class="contact">
+      <div class="role">Operations Manager / Microsoft&nbsp;365 Global Administrator</div>
+      <div>Inland Northwest Land Conservancy</div>
+      <div>Email: <a href="mailto:operations@inlandnwland.org">operations@inlandnwland.org</a></div>
+      <div>Spokane, Washington</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p><span class="mark">Inland Northwest Land Conservancy</span> &mdash; Microsoft&nbsp;365 Privacy Statement &middot; Version 1.0 &middot; Last reviewed June 2026.</p>
+</footer>
+
+</body>
+</html>
